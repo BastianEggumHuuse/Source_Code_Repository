@@ -1,18 +1,28 @@
 #include <stdio.h>
 #include <math.h>
-
+#include <stdlib.h>
+#include <string.h>
 int readSingleLine(char s[])
 {
     // We read a line into s, and return it's length
     // We assume that enough memory is allocated for s.
 
+    // Strictly visuals :)
+    printf("> ");
+
+    // We store the current char, and the length of the string
     char c;
     int l;
 
+    // Looping until a newline is found
     for(l = 0; (c = getchar()) != '\n'; l++)
     {
+        // Copying into string
         s[l] = c;
     }
+    
+    // Capping off the string
+    s[l] = '\0';
 
     return l;
 }
@@ -108,4 +118,9 @@ void printBinary(int d)
     decToBinaryString(d,s);
     writeString(s);
     printf("\n");
+}
+
+int isNumber(char c)
+{
+    return ('0' <= c && c <= '9');
 }
