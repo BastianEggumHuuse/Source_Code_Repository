@@ -4,6 +4,7 @@ void main()
 {
     // Chapter 6: Structures
     // This is what we've been waiting for. Our own datastructures!
+
     
     // 6.1) Basics of structures
     // Let's declare a struct:
